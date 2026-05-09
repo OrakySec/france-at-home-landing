@@ -22,9 +22,16 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Docker image
+      - name: Build and push Landing Page
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
           tags: ghcr.io/orakysec/france-at-home-landing:latest
+
+      - name: Build and push Tracker
+        uses: docker/build-push-action@v4
+        with:
+          context: ./tracker
+          push: true
+          tags: ghcr.io/orakysec/france-tracker:latest
