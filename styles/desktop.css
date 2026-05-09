@@ -762,9 +762,8 @@ main.mobile-frame {
     color: white;
     text-decoration: none;
     font-family: BebasNeue;
-    font-size: 24px;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px 0 25px 0;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(45, 193, 65, 0.4);
     display: flex;
@@ -1017,5 +1016,9 @@ main.mobile-frame {
     min-width: 300px;
     font-size: 1.5cqw;
     padding: 15px 40px;
+}
+
+.fixed-buy-button {
+    padding: 15px 40px 25px 40px;
 }
 
