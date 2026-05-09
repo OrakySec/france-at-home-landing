@@ -22,15 +22,17 @@ services:
       - ./tracker/data:/app/data
     networks:
       - YkaroNET
-    labels:
-      - "traefik.enable=true"
-      - "traefik.docker.network=YkaroNET"
-      - "traefik.http.routers.france-tracker.rule=Host(`franceathome.ykaromarques.com`) && (PathPrefix(`/rastreio`) || PathPrefix(`/api`))"
-      - "traefik.http.routers.france-tracker.entrypoints=websecure"
-      - "traefik.http.routers.france-tracker.tls.certresolver=letsencryptresolver"
-      - "traefik.http.middlewares.tracker-strip.stripprefix.prefixes=/rastreio"
-      - "traefik.http.routers.france-tracker.middlewares=tracker-strip"
-      - "traefik.http.services.france-tracker.loadbalancer.server.port=3001"
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=YkaroNET"
+        - "traefik.http.routers.france-tracker.rule=Host(`franceathome.ykaromarques.com`) && (PathPrefix(`/rastreio`) || PathPrefix(`/api`))"
+        - "traefik.http.routers.france-tracker.entrypoints=websecure"
+        - "traefik.http.routers.france-tracker.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.france-tracker.priority=100"
+        - "traefik.http.middlewares.tracker-strip.stripprefix.prefixes=/rastreio"
+        - "traefik.http.routers.france-tracker.middlewares=tracker-strip"
+        - "traefik.http.services.france-tracker.loadbalancer.server.port=3001"
 
 networks:
   YkaroNET:
