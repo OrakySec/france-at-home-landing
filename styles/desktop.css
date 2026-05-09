@@ -1136,6 +1136,67 @@ body {
 }
 
 /* CRO POWER-UP STYLES */
+/* Recipe Levels Section */
+.recipe-levels {
+    padding: 60px 10%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.recipe-levels .section-title {
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 3rem;
+    color: #001C57;
+    margin-bottom: 40px;
+}
+
+.levels-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.level-card {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: left;
+    border-top: 8px solid #001C57;
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.level-card:hover {
+    transform: translateY(-10px);
+}
+
+.level-card.simple { border-color: #4CAF50; }
+.level-card.intermediate { border-color: #FF9800; }
+.level-card.advanced { border-color: #FF061A; }
+
+.level-tag {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.level-card h3 {
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 1.8rem;
+    color: #001C57;
+    margin-bottom: 15px;
+}
+
+.level-card p {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
 .whats-included {
     background: #fff;
     padding: 50px 40px;
