@@ -32,6 +32,10 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     background-image: url('../assets/img/background-01.webp');
     background-size: 100%;
     background-position: top center;
