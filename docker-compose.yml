@@ -16,6 +16,26 @@ services:
         - "traefik.http.routers.france-at-home.tls.certresolver=letsencryptresolver"
         - "traefik.http.services.france-at-home.loadbalancer.server.port=80"
 
+  tracker:
+    build: ./tracker
+    container_name: france-tracker
+    restart: always
+    environment:
+      - TRACKER_PASSWORD=franceathome2026
+    volumes:
+      - ./tracker/data:/app/data
+    networks:
+      - YkaroNET
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=YkaroNET"
+      - "traefik.http.routers.france-tracker.rule=Host(`franceathome.ykaromarques.com`) && (PathPrefix(`/rastreio`) || PathPrefix(`/api`))"
+      - "traefik.http.routers.france-tracker.entrypoints=websecure"
+      - "traefik.http.routers.france-tracker.tls.certresolver=letsencryptresolver"
+      - "traefik.http.middlewares.tracker-strip.stripprefix.prefixes=/rastreio"
+      - "traefik.http.routers.france-tracker.middlewares=tracker-strip"
+      - "traefik.http.services.france-tracker.loadbalancer.server.port=3001"
+
 networks:
   YkaroNET:
     external: true

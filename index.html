@@ -64,6 +64,15 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
     <!-- End Meta Pixel Code -->
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wohy9njulb");
+    </script>
 </head>
 <body>
     <header>
@@ -526,5 +535,64 @@
         <script src="js/faq.js"></script>
         <script src="js/consent.js"></script>
 
+    <!-- Custom Tracker -->
+    <script>
+    (function() {
+        // ── Configuration ──
+        const TRACK_URL = '/api/track';
+        
+        // ── Session Logic ──
+        let sessionId = sessionStorage.getItem('tracker_session');
+        if (!sessionId) {
+            sessionId = 'sess_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+            sessionStorage.setItem('tracker_session', sessionId);
+        }
+
+        async function sendEvent(event, label = '') {
+            try {
+                await fetch(TRACK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        event,
+                        label,
+                        session_id: sessionId,
+                        referrer: document.referrer || 'direct',
+                        path: window.location.pathname
+                    })
+                });
+            } catch (e) { /* silent fail */ }
+        }
+
+        // ── Pageview ──
+        sendEvent('pageview');
+
+        // ── Click Tracking ──
+        document.addEventListener('click', function(e) {
+            // Find closest link or button
+            const target = e.target.closest('a, button');
+            if (!target) return;
+
+            // Determine label
+            let label = target.getAttribute('data-tracker') || 
+                        target.innerText.trim().substring(0, 30) || 
+                        target.getAttribute('aria-label') ||
+                        'unknown_btn';
+
+            // Special case for CTA buttons
+            if (target.classList.contains('buy-button') || target.closest('.button-link')) {
+                label = 'CTA_Buy_Now';
+            }
+            if (target.classList.contains('fixed-buy-button')) {
+                label = 'Floating_Buy_Now';
+            }
+            if (target.closest('.faq-item')) {
+                label = 'FAQ_Toggle';
+            }
+
+            sendEvent('click', label);
+        }, true);
+    })();
+    </script>
 </body>
 </html>
