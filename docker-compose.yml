@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  landing-page:
+    image: ghcr.io/orakysec/france-at-home-landing:latest
+    container_name: france-at-home-landing
+    restart: always
+    networks:
+      - YkaroNET
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=YkaroNET"
+        - "traefik.http.routers.france-at-home.rule=Host(`franceathome.ykaromarques.com`)"
+        - "traefik.http.routers.france-at-home.entrypoints=websecure"
+        - "traefik.http.routers.france-at-home.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.france-at-home.loadbalancer.server.port=80"
+
+networks:
+  YkaroNET:
+    external: true

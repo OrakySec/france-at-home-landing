@@ -1,0 +1,876 @@
+/* Definição da fonte personalizada "Tempting" */
+@font-face {
+    font-family: Tempting;
+    src: url(../assets/fonts/Tempting.woff);
+}
+
+/* Definição da fonte personalizada "Hallie" */
+@font-face {
+    font-family: Hallie;
+    src: url(../assets/fonts/Hallie.otf);
+}
+
+/* Definição da fonte personalizada "Gilroy" */
+@font-face {
+    font-family: Gilroy;
+    src: url(../assets/fonts/Gilroy.ttf);
+}
+
+/* Definição da fonte personalizada "BebasNeue" */
+@font-face {
+    font-family: BebasNeue;
+    src: url(../assets/fonts/BebasNeue.otf);
+}
+
+/* Propriedade global para o documento, desabilitando rolagem horizontal */
+html {
+    overflow-x: hidden;
+}
+
+/* Estilos globais para o body da página */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../assets/img/background-01.webp');
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    position: relative;
+}
+
+/* Wrapper para simular um dispositivo móvel */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+/* Divisor usado para espaçamento */
+.divisor {
+    width: 100%;
+    height: 50px;
+}
+
+/* Container principal da seção 01 */
+.container-01 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 70cqw;
+    flex: 1;
+}
+
+/* Ajustando o espaçamento entre os textos */
+.texto-01 .subtitle {
+    margin: 0;
+    margin-bottom: -5px;
+    line-height: 1.5;
+    transform: scaleY(1.3);
+}
+
+/* Ajustes de margem e espaçamento nos textos h2 */
+.texto-01 .tittle {
+    margin: 0;
+    line-height: 1.0;
+    transform: scaleY(1.2);
+}
+
+/* Estilos para o container das imagens */
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%;
+    padding: 3%;
+}
+
+/* Estilos para a imagem dentro do container */
+.imagem {
+    width: 124px;
+    height: 165;
+    border-radius: 20px;
+    margin-left: -20px;
+}
+
+/* Estilo adicional para a segunda imagem, movendo-a para baixo */
+.imagem:nth-child(2) {
+    margin-top: 40px;
+}
+
+/* Estilos para o container de estrelas */
+.estrelas {
+    width: 20cqw;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para a segunda seção de texto */
+.texto-02 {
+    text-align: center;
+    margin: 0;
+    line-height: 0;
+    margin-bottom: 50px;
+    transform: scaleY(1.3);
+}
+
+/* Estilos para o container de chamada para ação */
+.container-action-call {
+    background-color: #D4FBFF;
+    padding: 20px;
+    margin: 0;
+    border-radius: 30px;
+    text-align: center;
+    width: 100cqw;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Layout de grid para dividir o conteúdo */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilos para a coluna da esquerda */
+.left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilos para itens de texto */
+.text-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #001C57;
+    font-family: Gilroy;
+    font-size: 2.7cqw;
+    text-align: left;
+    margin-bottom: -20px;
+}
+
+/* Estilos para o ícone */
+.icon {
+    width: 12px;
+    height: 12px;
+    vertical-align: top;
+    margin-top: 6%;
+    border-radius: 100px;
+}
+
+/* Estilos para a coluna da direita */
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para a capa do eBook */
+.ebook-cover {
+    position: absolute;
+    right: -10%;
+    top: 42%;
+    transform: translateY(-50%);
+    z-index: 10;
+    max-width: none;
+    width: 70cqw;
+}
+
+.button-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Container para o botão de compra */
+.buy-button-container {
+    margin-top: 40px;
+}
+
+/* Estilos para o botão de compra */
+.buy-button {
+    background-color: #2DC141;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 7.5cqw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-family: BebasNeue;
+    margin-bottom: 20px;
+}
+
+/* Estilos ao passar o mouse sobre o botão de compra */
+.buy-button:hover {
+    background-color: #1fa731;
+}
+
+/* Container principal do carrossel */
+.carousel-container {
+    width: 100cqw;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Container do carrossel */
+.carousel-title {
+    transform: scaleY(1.3);
+    text-align: center;
+    font-size: 8cqw;
+    color: #001C57;
+    margin: 20px 0;
+    font-family: Hallie;
+    line-height: 0.5;
+}
+
+/* Carrosel */
+.carousel {
+    margin-top: 30px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Conteúdo do Carrosel */
+.carousel-slide {
+    position: relative;
+    min-width: 100cqw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem do Carrosel */
+.carousel-slide img {
+    width: 80cqw;
+    height: 60cqw;
+    object-fit: cover;
+    border-radius: 40px;
+    margin: 0 10px;
+    display: block;
+}
+
+/* Estilos para a legenda */
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    color: #ffffffbb;
+    padding: 5.3px 10px;
+    font-size: 4.5cqw;
+    max-width: 90%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 1;
+    font-family: Hallie;
+    transform: scaleY(1.3);
+}
+
+.offer-container {
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15cqw;
+    margin-top: -90px;
+}
+
+.watch-image img {
+    height: 62px;
+    width: 62px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+.limited-time-offer {
+    font-size: 11cqw;
+    color: #001C57;
+    font-weight: bold;
+    font-family: BebasNeue;
+    transform: scaleY(1.3);
+    margin-bottom: -2cqw;
+    margin-top: -1cqw;
+}
+
+.special-price {
+    font-size: 7.4cqw;
+    color: #001C57;
+    margin: 10px 0;
+    font-family: BebasNeue;
+    font-weight: 100;
+    transform: scaleY(1.3);
+    margin-bottom: -2cqw;
+}
+
+.first-100-buyers {
+    font-size: 16cqw;
+    color: #FF061A;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: BebasNeue;
+}
+
+/* Container da nova seção */
+.promo-container {
+    position: relative;
+    width: 100cqw;
+    height: 600px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem de fundo */
+.promo-background {
+    background-image:
+    linear-gradient(to top, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 99%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 99%),
+    url('../assets/img/torre.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Imagem sobreposta */
+.promo-overlay {
+    max-width: 90%;
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Container Principal de Reviews */
+.reviews-container {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+/* Estilo do Titulo das Reviews */
+.reviews-container h2 {
+    font-size: 24px;
+    margin: 0;
+    font-family: Gilroy;
+    color: #001C57;
+}
+
+/* Estilo do subtitulo das Reviews */
+.reviews-container p {
+    font-size: 16px;
+    margin: 5px 0;
+    font-family: Gilroy;
+    color: #555;
+}
+
+/* Estilo das Estrelas */
+.stars-img {
+    margin-top: 10px;
+}
+
+/* Container do Carrossel de Testimonials */
+.testimonial-carousel-container {
+    width: 100cqw;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-left: -4%;
+}
+
+/* Carrossel de Reviews */
+.testimonial-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Carrossel de Reviews */
+.testimonial-slide {
+    min-width: 100cqw;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do Conteúdo do Testimonial */
+.testimonial-content {
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do Texto de Review */
+.testimonial-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: Gilroy;
+}
+
+/* Conteúdo do Review */
+.testimonial-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilo do Nome do Avaliador */
+.testimonial-name {
+    font-size: 14px;
+    color: #000000;
+    font-family: Gilroy;
+    font-weight: 700;
+}
+
+/* Container geral da seção */
+.satisfaction-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20cqw;
+}
+
+/* Cada item individual */
+.satisfaction-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Número */
+.satisfaction-number {
+    font-size: 40px;
+    font-weight: 700;
+    color: #D72E2E;
+    font-family: Gilroy;
+    margin-bottom: 5px;
+}
+
+/* Texto */
+.satisfaction-text {
+    font-size: 11px;
+    color: #000000;
+    font-family: Gilroy;
+}
+
+/* Contêiner para o ícone */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10cqw;
+}
+
+/* Sessão de Influencia */
+/* Container principal das imagens e textos */
+.image-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Container da imagem */
+.image-container {
+    width: 60cqw;
+    height: 60cqw;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Estilo para as imagens */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* Título das seções */
+.image-text-item .tittle {
+    color: #001C57;
+    font-size: 5.5cqw;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: Hallie;
+    transform: scaleY(1.3);
+}
+
+/* Itens individuais com imagem e texto */
+.image-text-item {
+    width: 60cqw;
+    max-width: 500px;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+/* Texto descritivo */
+.image-text-item .subtittle {
+    color: #001C57;
+    font-size: 3cqw;
+    line-height: 1.5;
+    margin: 0;
+    word-wrap: break-word;
+    width: 63cqw;
+    font-family: Gilroy;
+    line-height: 1.0;
+}
+
+/* Alinha as imagens à esquerda e à direita alternadamente */
+.left {
+    align-self: flex-start;
+    margin-right: auto;
+    padding-left: 10%;
+}
+
+/* Alinha as imagens à esquerda e à direita alternadamente */
+.right {
+    align-self: flex-end;
+    margin-left: auto;
+    padding-right: 10%;
+}
+
+.mockup img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-bottom: -10cqw;
+    margin-top: -7cqw;
+}
+
+.description {
+    font-size: 5.1cqw;
+    color: #001C57;
+    font-family: Hallie;
+    transform: scaleY(1.3);
+    line-height: 1.0;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.faq-container h2 {
+    text-align: center;
+    font-family: Hallie;
+    color: #001C57;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.faq-container {
+    width: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.425);
+    text-align: left;
+    position: relative;
+    top: -40px;
+}
+
+.faq-question {
+    font-family: Gilroy;
+    font-size: 3.1cqw;
+    color: #001C57;
+}
+
+.faq-question .arrow {
+    color: #FF061A;
+    transition: transform 0.3s;
+    margin-right: 10px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    font-family: Gilroy, sans-serif;
+    color: #333;
+    padding-left: 35px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-top: 10px;
+}
+
+.faq-item.active .faq-question .arrow {
+    transform: rotate(90deg);
+}
+
+/* Container das notificações - Centralizado no Topo */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para cada notificação individual - Estilo Push Mobile */
+.notification {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #333;
+    padding: 10px 18px;
+    border-radius: 25px; /* Mais arredondado como notificação de sistema */
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(-100%); /* Vem de cima */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    max-width: 90vw;
+    pointer-events: auto;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
+
+/* Imagem do produto na notificação */
+.notification-img {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    background: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+.notification-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Conteúdo de texto */
+.notification-content {
+    flex-grow: 1;
+}
+
+.notification-text {
+    margin: 0;
+    font-size: 14px;
+    font-family: Gilroy, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.notification-subtext {
+    margin: 0;
+    font-size: 12px;
+    font-family: Gilroy, sans-serif;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Badge de verificado */
+.notification-badge {
+    color: #2DC141;
+    font-size: 18px;
+}
+
+/* Botão de Compra Fixo no Rodapé */
+.fixed-buy-button {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: 90%;
+    max-width: 400px;
+    background: linear-gradient(135deg, #2DC141 0%, #1fa731 100%);
+    color: white;
+    text-decoration: none;
+    font-family: BebasNeue;
+    font-size: 24px;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(45, 193, 65, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.fixed-buy-button:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.footer {
+    background-color: #FF061A;
+    height: 15px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 80px; /* Espaço para o botão fixo */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Ajustes específicos para Desktop */
+@media only screen and (min-width: 769px) {
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .container-01 {
+        margin-top: 100px;
+    }
+
+    .imagem {
+        width: 250px;
+        height: auto;
+    }
+
+    .left-side {
+        gap: 30px;
+    }
+
+    .text-item {
+        font-size: 1.2rem;
+    }
+
+    .ebook-cover {
+        width: 350px;
+        right: 5%;
+    }
+
+    .buy-button {
+        font-size: 2rem;
+        padding: 15px 40px;
+    }
+
+    .carousel-slide img {
+        width: 600px;
+        height: 400px;
+    }
+
+    .image-text-item {
+        width: 800px;
+        max-width: 90%;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .image-text-item.right {
+        flex-direction: row-reverse;
+    }
+
+    .image-container {
+        width: 400px;
+        height: 300px;
+        flex-shrink: 0;
+    }
+
+    .image-text-item .subtittle {
+        width: auto;
+        font-size: 1.1rem;
+    }
+
+    .faq-question {
+        font-size: 1.2rem;
+    }
+}
+
