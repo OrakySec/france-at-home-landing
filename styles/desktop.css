@@ -917,3 +917,103 @@ main.mobile-frame {
         border-image: linear-gradient(to right, #002395 33.3%, #ffffff 33.3%, #ffffff 66.6%, #ed2939 66.6%) 1;
     }
 }
+
+/* Footer Styles */
+.footer {
+    background: #001C57;
+    color: white;
+    padding: 60px 20px 100px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    font-family: 'Gilroy';
+    font-size: 1.1cqw;
+    opacity: 0.8;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Gilroy';
+    font-size: 0.9cqw;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-security {
+    font-family: 'BebasNeue';
+    font-size: 1.5cqw;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-family: 'Gilroy';
+    font-size: 0.8cqw;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.disclaimer {
+    font-family: 'Gilroy';
+    font-size: 0.7cqw;
+    opacity: 0.4;
+    line-height: 1.4;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+/* FAQ Responsiveness Fixes */
+.faq-container h2 {
+    font-family: 'BebasNeue';
+    font-size: 3cqw;
+    color: #001C57;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    padding: 15px 25px;
+    font-size: 1.2cqw;
+    font-weight: 700;
+}
+
+/* Buy Button Responsiveness */
+.buy-button {
+    width: auto;
+    min-width: 300px;
+    font-size: 1.5cqw;
+    padding: 15px 40px;
+}
+
