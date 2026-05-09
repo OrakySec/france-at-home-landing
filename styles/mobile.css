@@ -32,10 +32,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    height: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     background-image: url('../assets/img/background-01.webp');
     background-size: 100%;
     background-position: top center;
@@ -792,14 +788,6 @@ body {
     transform: translateX(-50%) scale(0.95);
 }
 
-.footer {
-    background-color: #FF061A;
-    height: 15px;
-    width: 100%;
-    position: relative;
-    margin-bottom: 80px; /* Espaço para o botão fixo */
-}
-
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -962,7 +950,7 @@ body {
 .footer {
     background: #001C57;
     color: white;
-    padding: 60px 20px 120px 20px;
+    padding: 60px 20px 160px 20px;
     text-align: center;
 }
 
