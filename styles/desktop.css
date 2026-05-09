@@ -756,8 +756,8 @@ main.mobile-frame {
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
-    width: 90%;
-    max-width: 400px;
+    width: 85%;
+    max-width: 360px;
     background: linear-gradient(135deg, #2DC141 0%, #1fa731 100%);
     color: white;
     text-decoration: none;
