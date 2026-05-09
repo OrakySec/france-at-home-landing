@@ -1067,3 +1067,136 @@ main.mobile-frame {
         height: 310px;
     }
 }
+
+/* Sticky Timer Banner */
+#sticky-timer-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FF061A;
+    color: white;
+    z-index: 10001;
+    padding: 10px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+    font-family: 'BebasNeue', sans-serif;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.banner-text {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+#countdown-timer {
+    font-size: 2rem;
+    font-weight: bold;
+    background: rgba(0,0,0,0.2);
+    padding: 2px 15px;
+    border-radius: 6px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.banner-btn {
+    background: white;
+    color: #FF061A;
+    text-decoration: none;
+    padding: 6px 20px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    animation: pulse-small 1.5s infinite;
+}
+
+.banner-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+@keyframes pulse-small {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+body {
+    padding-top: 60px;
+}
+
+#notification-container {
+    top: 90px !important;
+}
+
+/* CRO POWER-UP STYLES */
+.whats-included {
+    background: #fff;
+    padding: 50px 40px;
+    margin: 40px 0;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.included-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Gilroy';
+    font-size: 1.1rem;
+    color: #001C57;
+}
+
+.included-item i {
+    color: #2DC141;
+    font-size: 1.3rem;
+}
+
+.stars-row {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+/* Pulsing Buy Button */
+.buy-button {
+    animation: pulse-btn 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+.buy-button:hover {
+    animation: none;
+    transform: scale(1.05);
+}
+
+@keyframes pulse-btn {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(215, 46, 46, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(215, 46, 46, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(215, 46, 46, 0); }
+}

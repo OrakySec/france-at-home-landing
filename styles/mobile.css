@@ -72,16 +72,14 @@ body {
 /* Ajustando o espaçamento entre os textos */
 .texto-01 .subtitle {
     margin: 0;
-    margin-bottom: -5px;
-    line-height: 1.5;
-    transform: scaleY(1.3);
+    margin-bottom: 5px;
+    line-height: 1.2;
 }
 
 /* Ajustes de margem e espaçamento nos textos h2 */
 .texto-01 .tittle {
     margin: 0;
-    line-height: 1.0;
-    transform: scaleY(1.2);
+    line-height: 0.9;
 }
 
 /* Estilos para o container das imagens */
@@ -351,9 +349,9 @@ body {
 /* Imagem de fundo */
 .promo-background {
     background-image:
-    linear-gradient(to top, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 99%),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 99%),
-    url('../assets/img/torre.webp');
+        linear-gradient(to top, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 99%),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 99%),
+        url('../assets/img/torre.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -663,7 +661,7 @@ body {
 /* Container das notificações - Centralizado no Topo */
 #notification-container {
     position: fixed;
-    top: 20px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10000;
@@ -680,10 +678,12 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.05);
     color: #333;
     padding: 10px 18px;
-    border-radius: 25px; /* Mais arredondado como notificação de sistema */
+    border-radius: 25px;
+    /* Mais arredondado como notificação de sistema */
     margin-bottom: 10px;
     opacity: 0;
-    transform: translateY(-100%); /* Vem de cima */
+    transform: translateY(-100%);
+    /* Vem de cima */
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     align-items: center;
@@ -761,7 +761,7 @@ body {
     text-align: center;
     padding: 16px 20px;
     border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(45, 193, 65, 0.4), 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(45, 193, 65, 0.4), 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -802,9 +802,11 @@ body {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
     }
@@ -814,6 +816,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -839,10 +842,21 @@ body {
     font-size: 6cqw;
 }
 
-.trust-badges .fa-cc-visa { color: #1A1F71; }
-.trust-badges .fa-cc-mastercard { color: #EB001B; }
-.trust-badges .fa-cc-amex { color: #007bc1; }
-.trust-badges .fa-cc-paypal { color: #003087; }
+.trust-badges .fa-cc-visa {
+    color: #1A1F71;
+}
+
+.trust-badges .fa-cc-mastercard {
+    color: #EB001B;
+}
+
+.trust-badges .fa-cc-amex {
+    color: #007bc1;
+}
+
+.trust-badges .fa-cc-paypal {
+    color: #003087;
+}
 
 .secure-text {
     font-family: 'Gilroy';
@@ -1038,7 +1052,7 @@ body {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .faq-question {
@@ -1064,7 +1078,7 @@ body {
     background: #001C57;
     color: white;
     z-index: 10000;
-    box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
     font-family: 'Gilroy', sans-serif;
     padding: 20px 15px;
     display: flex;
@@ -1108,7 +1122,120 @@ body {
 .cookie-reject {
     background-color: transparent;
     color: white;
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Sticky Timer Banner */
+#sticky-timer-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FF061A;
+    color: white;
+    z-index: 10001;
+    padding: 8px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-family: 'BebasNeue', sans-serif;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.banner-text {
+    font-size: 4cqw;
+    letter-spacing: 0.5px;
+}
+
+#countdown-timer {
+    font-size: 6cqw;
+    font-weight: bold;
+    background: rgba(0,0,0,0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.banner-btn {
+    background: white;
+    color: #FF061A;
+    text-decoration: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 3.5cqw;
+    font-weight: bold;
+    animation: pulse-small 1.5s infinite;
+}
+
+@keyframes pulse-small {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Adjust main content to not be covered by banner */
+body {
+    padding-top: 45px;
+}
+
+/* CRO POWER-UP STYLES */
+.whats-included {
+    background: #fff;
+    padding: 30px 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.included-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Gilroy';
+    font-size: 3.8cqw;
+    color: #001C57;
+}
+
+.included-item i {
+    color: #2DC141;
+    font-size: 5cqw;
+}
+
+.stars-row {
+    color: #FFD700;
+    font-size: 5cqw;
+    margin-bottom: 10px;
+}
+
+.testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 
+/* Pulsing Buy Button */
+.buy-button {
+    animation: pulse-btn 2s infinite;
+}
+
+@keyframes pulse-btn {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(215, 46, 46, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(215, 46, 46, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(215, 46, 46, 0); }
+}
+
