@@ -19,7 +19,7 @@ services:
     environment:
       - TRACKER_PASSWORD=franceathome2026
     volumes:
-      - ./tracker/data:/app/data
+      - tracker_data:/app/data
     networks:
       - YkaroNET
     deploy:
@@ -29,7 +29,7 @@ services:
         - "traefik.http.routers.france-tracker.rule=Host(`franceathome.ykaromarques.com`) && (PathPrefix(`/rastreio`) || PathPrefix(`/api`))"
         - "traefik.http.routers.france-tracker.entrypoints=websecure"
         - "traefik.http.routers.france-tracker.tls.certresolver=letsencryptresolver"
-        - "traefik.http.routers.france-tracker.priority=100"
+        - "traefik.http.routers.france-tracker.priority=1000"
         - "traefik.http.middlewares.tracker-strip.stripprefix.prefixes=/rastreio"
         - "traefik.http.routers.france-tracker.middlewares=tracker-strip"
         - "traefik.http.services.france-tracker.loadbalancer.server.port=3001"
@@ -37,3 +37,6 @@ services:
 networks:
   YkaroNET:
     external: true
+
+volumes:
+  tracker_data:
