@@ -752,7 +752,7 @@ body {
 /* Botão de Compra Fixo no Rodapé */
 .fixed-buy-button {
     position: fixed;
-    bottom: 40px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
