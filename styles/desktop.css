@@ -774,8 +774,22 @@ main.mobile-frame {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     transition: transform 0.3s ease;
+}
+
+.fixed-main-text {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fixed-sub-text {
+    font-family: 'Gilroy';
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
 }
 
 .fixed-buy-button:active {
