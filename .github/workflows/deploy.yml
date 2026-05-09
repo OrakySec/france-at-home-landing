@@ -28,11 +28,3 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/orakysec/france-at-home-landing:latest
-
-  deploy:
-    needs: build-and-push
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to Portainer via Webhook
-        run: |
-          curl -X POST "${{ secrets.PORTAINER_WEBHOOK }}"
