@@ -816,11 +816,25 @@ main.mobile-frame {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     margin-top: 15px;
     color: #464646;
-    font-size: 1cqw;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.trust-badges i {
+    font-size: 1.5cqw;
+}
+
+.trust-badges .fa-cc-visa { color: #1A1F71; }
+.trust-badges .fa-cc-mastercard { color: #EB001B; }
+.trust-badges .fa-cc-amex { color: #007bc1; }
+.trust-badges .fa-cc-paypal { color: #003087; }
 
 .secure-text {
     font-family: 'Gilroy';
@@ -829,41 +843,7 @@ main.mobile-frame {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-/* Guarantee Section Styles */
-.guarantee-section {
-    padding: 20px;
-    margin: 20px 0;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    border: 1px solid rgba(0, 28, 87, 0.1);
-}
-
-.guarantee-badge {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.guarantee-badge i {
-    font-size: 3cqw;
-    color: #001C57;
-}
-
-.guarantee-title {
-    font-family: 'BebasNeue';
-    font-size: 2cqw;
-    color: #001C57;
-    margin: 0;
-}
-
-.guarantee-description {
-    font-family: 'Gilroy';
-    font-size: 1cqw;
-    color: #464646;
-    margin: 5px 0 0 0;
+    color: #27ae60;
 }
 
 /* Ajustes específicos para Desktop - Temática Culinária Francesa Premium */
