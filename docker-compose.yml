@@ -39,8 +39,6 @@ services:
 networks:
   YkaroNET:
     external: true
-  YkaroNET:
-    external: true
 
 volumes:
   tracker_data:
